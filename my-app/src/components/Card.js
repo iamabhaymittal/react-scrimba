@@ -1,4 +1,5 @@
 import React from "react";
+import "@fontsource/inter";
 
 export default function Card(props) {
   return (
@@ -7,11 +8,13 @@ export default function Card(props) {
         <img src={props.imageUrl}></img>
       </div>
       <div className="card--data">
-        <img src={require("../location_icon.png")} />
-        <p className="card--location">{props.location}</p>
-        <a className="" href={props.googleMapsUrl}>
-          View on Google Maps
-        </a>
+        <div className="card--location--details">
+          <img src={require("../location_icon.png")} />
+          <p className="card--location">{props.location}</p>
+          <a className="" href={props.googleMapsUrl}>
+            View on Google Maps
+          </a>
+        </div>
         <h1>{props.title}</h1>
         <p className="card--date">
           {props.startDate} - {props.endDate}
